@@ -8,7 +8,6 @@ const Notify = () => {
   const [etc, setEtc] = useState(false);
 
   const fetchApi = async (data) => {
-    console.log(data)
     await axios
       .post("http://localhost:8080/notify", {
         options: data.options,
@@ -19,7 +18,6 @@ const Notify = () => {
       .then((res) => {
         if (res.data.result === "OK") {
           alert(`저장 되었습니다.`);
-          console.log(res.data);
           window.location.reload();
         }
       });
@@ -64,38 +62,43 @@ const Notify = () => {
                   <option value="" defaultValue>
                     선택
                   </option>
-                  <option name="BTC" value="BTC">
+                  <option name="BTC" value="0">
                     비트코인(BTC)
                   </option>
-                  <option name="ETH" value="ETH">
+                  <option name="ETH" value="1">
                     이더리움(ETH)
                   </option>
-                  <option name="BNB" value="BNB">
+                  <option name="BNB" value="2">
                     BNB(BNB)
                   </option>
-                  <option name="XRP" value="XRP">
+                  <option name="XRP" value="3">
                     리플(XRP)
                   </option>
-                  <option name="DOGE" value="DOGE">
+                  <option name="DOGE" value="4">
                     도지 코인(DOGE)
                   </option>
-                  <option name="ADA" value="ADA">
+                  <option name="ADA" value="5">
                     에이다(ADA)
                   </option>
-                  <option name="MATIC" value="MATIC">
+                  <option name="MATIC" value="6">
                     폴리곤(MATIC)
                   </option>
-                  <option name="DOT" value="DOT">
+                  <option name="DOT" value="7">
                     폴카닷(DOT)
                   </option>
-                  <option name="SOL" value="SOL">
+                  <option name="SOL" value="8">
                     솔라나(SOL)
                   </option>
-                  <option name="etc" value="etc">
+                  <option name="etc" value="9">
                     기타
                   </option>
                 </select>
-                <p role="alert" className="alert"><AiFillExclamationCircle />{errors.main_net?.message}</p>
+                {errors.main_net?.message && (
+                  <p role="alert" className="alert">
+                    <AiFillExclamationCircle />
+                    {errors.main_net?.message}
+                  </p>
+                )}
               </li>
               <li>
                 <h6 className="sub-sub-Title">
@@ -103,7 +106,7 @@ const Notify = () => {
                 </h6>
                 <input
                   type="text"
-                  placeholder="예) 0fda7asfdsaf8asdfs89sdafsf8d9sqerw8"
+                  placeholder="예) 0xda7asfdsaf8asdfs89sdafsf8d9sqerw8"
                   {...register("address", {
                     required: {
                       value: true,
@@ -111,7 +114,12 @@ const Notify = () => {
                     },
                   })}
                 />
-                <p role="alert" className="alert"><AiFillExclamationCircle />{errors.address?.message}</p>
+                {errors.address?.message && (
+                  <p role="alert" className="alert">
+                    <AiFillExclamationCircle />
+                    {errors.address?.message}
+                  </p>
+                )}
               </li>
             </ul>
           </div>
@@ -253,7 +261,12 @@ const Notify = () => {
                     />
                   </div>
                 )}
-                <p role="alert" className="alert"><AiFillExclamationCircle />{errors.options?.message}</p>
+                {errors.options?.message && (
+                  <p role="alert" className="alert">
+                    <AiFillExclamationCircle />
+                    {errors.options?.message}
+                  </p>
+                )}
               </div>
             </>
           )}
