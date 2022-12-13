@@ -1,0 +1,196 @@
+body {
+  margin: 0;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* Common */
+.layoutfix {width: 1320px; margin: 0 auto;}
+.bottomLink {font-size: 16px; letter-spacing: 1px; color: #101743;}
+.bottomLink em {}
+.bottomLink a {margin: 0 0 0 10px; position: relative; transition: all .5s;}
+.bottomLink a::after {content: ""; height: 1px; width: 100%; position: absolute; left: 0; bottom: -1px; background-color: black;}
+.subTitle {width: 100%; position: relative; margin: 0 0 110px;}
+.subTitle::after {content: ""; width: 100%; height: 1px; background-color: #D1D0D5; position: absolute; left: 0; bottom: -25px;}
+.subTitle b {font-size: 24px; font-weight: 500; color: #101743;}
+.subTitle p {font-size: 15px; font-weight: 500; color: #595B6A; font-weight: 300; margin: 10px 0 0 0;}
+.subTitle p em {color: #495FE9; font-weight: 700;}
+.leftTitle h4 {font-size: 45px; font-weight: 700; line-height: 39px; color: #101743; margin: 0 0 50px;}
+.leftTitle p {color: #101743; font-size: 20px; line-height: 34px; font-weight: 300; margin: 0 0 90px;}
+.leftTitle p em {color: #495FE9; font-weight: 700;}
+.content {margin: 0 0 40px;}
+/* input[type="radio"] {border: max(2px, 0.1em) solid gray; border-radius: 3px; width: 1.25em; height: 1.25em; vertical-align: text-top; margin: 0 5px 0 0; transition: all .3s;}
+[type="radio"]:checked {background: #495FE9; border: 1px solid transparent; transition: all .3s;}
+[type="radio"]:focus-visible {outline-offset: max(2px, 0.1em); outline: max(2px, 0.1em) dotted #495FE9;}
+[type="radio"]:hover {box-shadow: 0 0 0 max(4px, 0.2em) lightgray; cursor: pointer;}
+[type="radio"]:disabled {
+  background-color: lightgray;
+  box-shadow: none;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+ */
+[type="radio"]:disabled + span {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+/* label span {font-size: 16px;}
+label {margin: 0 20px 0 0;} */
+.form_radio_btn {
+  width: 190px;
+  height : 55px;
+  border: 1px solid #EAE7E7;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0 20px 0 0;
+  transition: all .5s;
+}
+.form_radio_btn input[type=radio] {
+  display: none;
+}
+.form_radio_btn label {
+  display: block;
+  border-radius: 5px;
+  margin: 0 auto;
+  text-align: center;
+  height: -webkit-fill-available;
+  line-height: 55px;
+  transition: all .5s;
+  cursor: pointer;
+}
+ 
+/* Checked */
+.form_radio_btn input[type=radio]:checked + label {
+  background: #6B7CE8;
+  color: #fff;
+  transition: all .5s;
+}
+ 
+/* Hover */
+.form_radio_btn label:hover {
+  box-shadow: inset 1px 1px 10px rgb(193 193 193); transition: all .5s;
+}
+.form_radio_btn input[type=radio]:checked + label:hover {box-shadow: inset 3px 3px 12px rgb(61, 61, 131); transition: all .5s;}
+ 
+/* Disabled */
+.form_radio_btn input[type=radio] + label {
+  background-color: #F9F9FA;
+  border: 1px solid #D1D0D5;
+  color: #101743;
+}
+
+/* Table */
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-style: solid; border-width: 1px; font-family: Arial, sans-serif; overflow: hidden; word-break: normal; padding: 17px; border-color: #D1D0D5; font-size: 16px; font-weight: 500; color: #000000;}
+.tg th{border-color: black; border-style: solid; border-width: 1px; font-family: Arial, sans-serif; overflow: hidden; padding: 25px 5px; background: #D1D0D5; word-break: normal; border: 1px solid #D1D0D5; font-size: 18px; font-weight: 600; color: #4E4E4E;}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-nrix{text-align: center; vertical-align: middle;}
+
+/* Header */
+header {position: fixed; top: 0; left: 0; background-color: #F3F4F6; border-bottom: 0.2 solid #595B6A; width: 100vw; z-index: 99;}
+header h1 {}
+header ul li h1 > a {padding: 25px 30px 25px 0 !important; font-size: 20px; font-weight: 500; color: #101743; position: relative;}
+header ul li h1 > a em {position: relative;}
+header ul li h1 > a em::after {content: ""; height: 100%; position: absolute; top: 0; right: -50%; width: 0.7px; background-color: #101743;}
+header h1 em {}
+header ul {}
+header ul li {display: inline-block;}
+header ul li a {font-size: 17px; color: #595B6A; font-weight: 400;  padding: 25px 0 25px 30px;}
+header ul li a.clicked {color: #495FE9; font-weight: 500; font-size: 20px;}
+
+/* Home */
+section {}
+section .mainTitle {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center;}
+section .mainTitle h5 {font-size: 24px; font-weight: 700; color: #101743; margin: 0 0 30px;}
+section .mainTitle p {font-size: 50px; font-weight: 300; line-height: 50px; color: #101743;}
+section .mainTitle input[type="text"] {width: 750px; height: 60px; background: #D1D0D5; background: #F9F9FA; border: 1px solid transparent; font-size: 15px; border-radius: 30px; margin: 30px 0 20px; padding: 0 34px; box-sizing: border-box; font-size: 17px;}
+input[type="text"]::placeholder {color:#BBBAC1;}
+section .mainTitle button {width: 140px; height: 60px; border-radius: 30px; position: absolute; right: 0; margin: 30px 0; transition: all .5s;}
+section .mainTitle button:hover {box-shadow: inset 1px 1px 10px rgb(193 193 193); transition: all .5s;}
+section .mainTitle button img {width: 30px;}
+section .mainTitle .bottomLink {font-size: 16px; letter-spacing: 2px; color: #101743;}
+section .mainTitle .bottomLink em {}
+section .mainTitle .bottomLink a {margin: 0 0 0 10px; position: relative; transition: all .5s;}
+.list .layoutfix .subTitle {}
+
+/* List */
+.list {padding: 180px 0;}
+.list .layoutfix {}
+.list .layoutfix .leftTitle {}
+.list .layoutfix .leftTitle h4 {font-size: 45px; font-weight: 700; line-height: 39px; color: #101743; margin: 0 0 50px;}
+.list .layoutfix .leftTitle p {color: #101743; font-size: 20px; line-height: 34px; font-weight: 300; margin: 0 0 90px;}
+.list .layoutfix .leftTitle p em {color: #495FE9; font-weight: 700;}
+.list .layoutfix .inputBox {text-align: center;}
+.list .layoutfix .inputBox input[type="text"] {width: 665px; height: 60px; background: #D1D0D5; background: #F9F9FA; border: 1px solid #D1D0D5; font-size: 15px; border-radius: 5px; padding: 0 34px; box-sizing: border-box; font-size: 17px; text-align: center;}
+.list .layoutfix .inputBox button { width: 115px; height: 60px; border-radius: 5px; background: #979797; color: #fff; margin: 0 0 0 10px; transition: all .5s;}
+.list .layoutfix .inputBox button:hover {box-shadow: inset 3px 3px 10px rgb(116, 116, 116); transition: all .5s;}
+.list .layoutfix p {}
+.list .layoutfix > p {color: #595B6A; font-size: 16px; font-weight: 300; line-height: 39px; margin: 20px 0; text-align: center;}
+.list .layoutfix > p em {color: #495FE9; font-weight: 700;}
+.list .layoutfix .btnBox {text-align: center;}
+.list .layoutfix .btnBox button {width: 240px; height: 70px; color: #F9F9FA; background: #6B7CE8; border-radius: 5px; transition: all .5s; }
+.list .layoutfix .btnBox button:hover {box-shadow: inset 3px 3px 12px rgb(61, 61, 131); transition: all .5s;}
+.list .layoutfix .btnBox button em {font-size: 15px; font-weight: 500;}
+.list .layoutfix .btnBox button em:last-child {margin: 0 0 0 4px;}
+.list .layoutfix .btnBox button.danger {background: #F95C67; margin: 0 0 0 25px; transition: all .5s;}
+.list .layoutfix .btnBox button.danger:hover {box-shadow: inset 3px 3px 12px #812a30; transition: all .5s;}
+.list .layoutfix .btnBox button.danger em {}
+.list .layoutfix .btnBox button.danger em:last-child {}
+.list .layoutfix .bottomLink {margin: 25px 0 50px; text-align: center; color: #595B6A;}
+.list .layoutfix .bottomLink em {}
+.list .layoutfix .bottomLink a {}
+.list .layoutfix table {}
+
+/* Notify */
+.subBox {margin: 0 0 60px;}
+.notify {padding: 180px 0;}
+.notify .layoutfix {}
+.notify .layoutfix ul li {display: inline-block; vertical-align: top;}
+.notify .layoutfix ul li:last-child {margin: 0 0 0 30px;}
+h6.sub-sub-Title {font-size: 18px; font-weight: 500; color: #101743; margin: 0 0 20px;}
+h6.sub-sub-Title {font-size: 18px; font-weight: 500; color: #101743; margin: 0 0 20px;}
+h6.sub-sub-Title em {color: red;}
+.notify .layoutfix input[type="text"] {width: 510px; height: 38px; border-radius: 5px; background-color: #F9F9FA; border: 1px solid #D1D0D5; padding: 0 10px;}
+.notify .layoutfix input[type="text"]::placeholder {color: #BBBAC1; font-size: 14px; font-weight: 300;}
+.notify .layoutfix ul li select {width: 240px; height: 40px; background-color: #F9F9FA; border: 1px solid #D1D0D5; border-radius: 5px; padding: 10px; transition: all 1s;}
+.notify .layoutfix ul li select:hover {border: 1px solid #101743 !important; transition: all 1s;}
+.notify .layoutfix ul li select:focus {border: 1px solid #101743 !important; transition: all 1s;}
+.notify .layoutfix ul li select option {}
+.notify .layoutfix .subTitle {margin: 0 0 50px;}
+.notify .layoutfix .subTitle b {vertical-align: middle;}
+.notify .layoutfix .subTitle:hover ~ .comment {opacity: 1; transition: all .5s;}
+.notify .layoutfix .subTitle img {width: 19px; opacity: 34%; vertical-align: middle;}
+.notify .layoutfix .subTitle .comment {padding: 20px; width: 390px; color: #FFF; border-radius: 10px; background-color: #B9B9B9; text-align: center; font-size: 15px; display: inline-block; vertical-align: middle; opacity: 0; transition: all .5s; position: absolute; top: -18px;}
+.notify .layoutfix .subTitle .comment::after {content:""; position: absolute; top: 50%; transform: translateY(-50%); left: -20px; border-right: 20px solid #B9B9B9; border-top: 10px solid transparent; border-bottom: 10px solid transparent;}
+.notify .layoutfix .subTitle svg {color: #9D9D9E; font-size: 22px; vertical-align: middle; padding: 0 30px 0 10px;}
+.notify .layoutfix .subTitle svg:hover~.comment {opacity: 1;}
+.notify .layoutfix .btnBox {}
+.notify .layoutfix .btnBox a {width: 190px; height: 55px; background-color: #F9F9FA; color: #101743; font-size: 14px; font-weight: 500; border: 1px solid #D1D0D5; text-align: center; border-radius: 5px; transition: all .3s;}
+.notify .layoutfix .btnBox a:hover {box-shadow: inset 1px 1px 10px rgb(193 193 193); transition: all .5s;}
+.notify .layoutfix .btnBox a.clicked:hover {box-shadow: inset 3px 3px 12px rgb(61, 61, 131); transition: all .3s;}
+.notify .layoutfix .btnBox a {margin: 0 0 0 20px;}
+.notify .layoutfix .btnBox a:first-child {margin: 0;}
+.notify .layoutfix .btnBox a.clicked {background-color: #6B7CE8; color: #F3F4F6; border: 1px solid transparent;}
+.notify .layoutfix .btnBox a.danger {background: #F95C67; color: #F3F4F6; border: 1px solid transparent;}
+.notify .layoutfix .btnBox a.danger:hover {box-shadow: inset 3px 3px 12px #812a30; transition: all .5s;}
+.notify .layoutfix .btnBox a em {line-height: 55px;}
+.notify .layoutfix .submitBox {text-align: right;}
+.notify .layoutfix .submitBtn {width: 220px; height: 60px; background-color: #495FE9; font-size: 18px; color: #F3F4F6; font-weight: 500; text-align: center; border-radius: 5px; transition: all .3s;}
+.notify .layoutfix .submitBtn:hover {box-shadow: inset 3px 3px 12px rgb(47, 47, 100); transition: all .3s;}
+.notify .layoutfix .describe {display: none;}
+.notify .layoutfix .describe.active {display: block;}
+.notify .layoutfix .describe svg {color: #495FE9; display: inline-block; font-size: 15px; vertical-align: text-top; margin: 0 5px 0 0;margin: 30px 5px 0 0;}
+.notify .layoutfix .describe em {color: #393B46; font-size: 15px; vertical-align: top; margin: 30px 0 20px;}
+.notify .layoutfix .describe em b {color: #495FE9;}
+.notify .layoutfix .describe input {display: block;}
+.extraInfo {display: none;}
+.extraInfo.active {display: block;}
+.describe {display: none;}
+.describe.active {display: block;}

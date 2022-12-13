@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  width: 25%;
+  height: 100vh;
+  border: 1px solid gray;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  font-size: large;
+  font-weight: 600;
+  color: #fff;
+  background-color: #0068C8;
+}
+
+.header svg {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.header span {
+  margin: 0 40px 0 160px;
+}
+
+.coinInfo {
+  width: 100%;
+background-color: #F7F7F7;
+height: 300px;
+}
