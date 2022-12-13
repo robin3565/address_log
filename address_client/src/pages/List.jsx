@@ -44,21 +44,20 @@ const List = () => {
           <b>암호화폐 지갑주소 정보</b>
         </div>
         <div className="inputBox">
-          <input type="text" name="" id="" value={address} />
-          <button>스캔 보기</button>
+          <p>{address}</p>
         </div>
         <p>
           총 <em>{res?.total_cnt}번</em>의 정보 등록 내역이 있습니다.
         </p>
         <div className="btnBox">
-          <button>
+          <span>
             <em>안전해요</em>
             <em>{res?.safe_cnt}</em>
-          </button>
-          <button className="danger">
+          </span>
+          <span className="danger">
             <em>위험해요</em>
             <em>{res?.danger_cnt}</em>
-          </button>
+          </span>
         </div>
         <div className="bottomLink">
           <em>해당 지갑주소 정보 등록을 하고 싶어요!</em>
@@ -71,6 +70,7 @@ const List = () => {
               <th className="tg-nrix">종류</th>
               <th className="tg-nrix">피해 분류</th>
               <th className="tg-nrix">등록일</th>
+              <th class="tg-nrix">스캔</th>
             </tr>
           </thead>
           <tbody>
@@ -89,6 +89,7 @@ const List = () => {
                     </td>
 
                     <td className="tg-cly1">{item.reg_date.split("T")[0]}</td>
+                    <td class="tg-nrix"><a href="">보기</a></td>
                   </tr>
                 )
               );

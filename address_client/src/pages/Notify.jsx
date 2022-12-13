@@ -95,7 +95,7 @@ const Notify = () => {
                     기타
                   </option>
                 </select>
-                <p role="alert">{errors.main_net?.message}</p>
+                <p role="alert" className="alert"><AiFillExclamationCircle />{errors.main_net?.message}</p>
               </li>
               <li>
                 <h6 className="sub-sub-Title">
@@ -111,7 +111,7 @@ const Notify = () => {
                     },
                   })}
                 />
-                <p role="alert">{errors.address?.message}</p>
+                <p role="alert" className="alert"><AiFillExclamationCircle />{errors.address?.message}</p>
               </li>
             </ul>
           </div>
@@ -253,7 +253,7 @@ const Notify = () => {
                     />
                   </div>
                 )}
-                <p role="alert">{errors.options?.message}</p>
+                <p role="alert" className="alert"><AiFillExclamationCircle />{errors.options?.message}</p>
               </div>
             </>
           )}

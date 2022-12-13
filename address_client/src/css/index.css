@@ -65,6 +65,12 @@ label {margin: 0 20px 0 0;} */
   transition: all .5s;
   cursor: pointer;
 }
+.alert {color: #fd0d1d; font-weight: 600; margin: 5px 0 0 0;}
+.alert svg {vertical-align: sub; margin: 0 5px 0 0;}
+.alertBox {margin: 30px 0 20px;}
+.alertBox svg {color: #495FE9; vertical-align: sub; margin: 0 5px 0 0; font-size: 20px;}
+.alertBox em {color: #393B46; font-weight: 500;}
+.alertBox em b {color: #495FE9; font-weight: 800;}
  
 /* Checked */
 .form_radio_btn input[type=radio]:checked + label {
@@ -127,22 +133,20 @@ section .mainTitle .bottomLink a {margin: 0 0 0 10px; position: relative; transi
 .list .layoutfix .leftTitle h4 {font-size: 45px; font-weight: 700; line-height: 39px; color: #101743; margin: 0 0 50px;}
 .list .layoutfix .leftTitle p {color: #101743; font-size: 20px; line-height: 34px; font-weight: 300; margin: 0 0 90px;}
 .list .layoutfix .leftTitle p em {color: #495FE9; font-weight: 700;}
-.list .layoutfix .inputBox {text-align: center;}
-.list .layoutfix .inputBox input[type="text"] {width: 665px; height: 60px; background: #D1D0D5; background: #F9F9FA; border: 1px solid #D1D0D5; font-size: 15px; border-radius: 5px; padding: 0 34px; box-sizing: border-box; font-size: 17px; text-align: center;}
+.list .layoutfix .inputBox {width: 665px; height: 60px; background: #D1D0D5; background: #F9F9FA; border: 1px solid #D1D0D5; font-size: 15px; border-radius: 5px; padding: 0 34px; box-sizing: border-box; font-size: 17px; text-align: center; text-align: center; margin: 0 auto;}
+.list .layoutfix .inputBox p {line-height: 60px;}
 .list .layoutfix .inputBox button { width: 115px; height: 60px; border-radius: 5px; background: #979797; color: #fff; margin: 0 0 0 10px; transition: all .5s;}
 .list .layoutfix .inputBox button:hover {box-shadow: inset 3px 3px 10px rgb(116, 116, 116); transition: all .5s;}
 .list .layoutfix p {}
 .list .layoutfix > p {color: #595B6A; font-size: 16px; font-weight: 300; line-height: 39px; margin: 20px 0; text-align: center;}
 .list .layoutfix > p em {color: #495FE9; font-weight: 700;}
 .list .layoutfix .btnBox {text-align: center;}
-.list .layoutfix .btnBox button {width: 240px; height: 70px; color: #F9F9FA; background: #6B7CE8; border-radius: 5px; transition: all .5s; }
-.list .layoutfix .btnBox button:hover {box-shadow: inset 3px 3px 12px rgb(61, 61, 131); transition: all .5s;}
-.list .layoutfix .btnBox button em {font-size: 15px; font-weight: 500;}
-.list .layoutfix .btnBox button em:last-child {margin: 0 0 0 4px;}
-.list .layoutfix .btnBox button.danger {background: #F95C67; margin: 0 0 0 25px; transition: all .5s;}
-.list .layoutfix .btnBox button.danger:hover {box-shadow: inset 3px 3px 12px #812a30; transition: all .5s;}
-.list .layoutfix .btnBox button.danger em {}
-.list .layoutfix .btnBox button.danger em:last-child {}
+.list .layoutfix .btnBox span {width: 240px; height: 70px; color: #F9F9FA; background: #6B7CE8; border-radius: 5px;}
+.list .layoutfix .btnBox span em {font-size: 15px; font-weight: 500; line-height: 70px;}
+.list .layoutfix .btnBox span em:last-child {margin: 0 0 0 4px;}
+.list .layoutfix .btnBox span.danger {background: #F95C67; margin: 0 0 0 25px;}
+.list .layoutfix .btnBox span.danger em {}
+.list .layoutfix .btnBox span.danger em:last-child {}
 .list .layoutfix .bottomLink {margin: 25px 0 50px; text-align: center; color: #595B6A;}
 .list .layoutfix .bottomLink em {}
 .list .layoutfix .bottomLink a {}
