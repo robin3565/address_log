@@ -74,7 +74,7 @@ const List = () => {
           <em>해당 지갑주소 정보 등록을 하고 싶어요!</em>
           <Link to="/notify">정보 등록 바로가기</Link>
         </div>
-        {res?.data?.length > 0 && (
+        {res?.data?.length > 0 && res?.danger_cnt > 0 && (
           <table className="tg">
             <thead>
               <tr>

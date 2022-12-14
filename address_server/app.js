@@ -24,4 +24,7 @@ app.use('/', notify)
 const login = require('./routes/login');
 app.use('/', login)
 
+const address_api = require('./routes/address_api');
+app.use('/', address_api)
+
 module.exports = app;
