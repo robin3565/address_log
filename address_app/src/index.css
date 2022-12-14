@@ -47,6 +47,27 @@ code {
 
 .coinInfo {
   width: 100%;
-background-color: #F7F7F7;
-height: 300px;
+  background-color: #F7F7F7;
+  height: 300px;
+}
+
+.sendTo {
+  width: 100%;
+  padding: 30px;
+}
+
+.sendTo p {
+  font-weight: 600;
+  font-size: large;
+  margin: 10px 0;
+}
+
+.sendTo p span{
+  font-weight: 400;
+  font-size: small;
+}
+
+.sendTo input {
+  width: 80%;
+  height: 28px;
 }
