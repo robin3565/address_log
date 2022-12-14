@@ -100,7 +100,7 @@ label {margin: 0 20px 0 0;} */
 .tg .tg-nrix{text-align: center; vertical-align: middle;}
 
 /* Header */
-header {position: fixed; top: 0; left: 0; background-color: #F3F4F6; border-bottom: 0.2 solid #595B6A; width: 100vw; z-index: 99;}
+header {position: fixed; top: 0; left: 0; background-color: #F3F4F6; border-bottom: 0.2 solid #595B6A; width: 100%; z-index: 99;}
 header h1 {}
 header ul li h1 > a {padding: 25px 30px 25px 0 !important; font-size: 20px; font-weight: 500; color: #101743; position: relative;}
 header ul li h1 > a em {position: relative;}
@@ -113,18 +113,19 @@ header ul li a.clicked {color: #495FE9; font-weight: 500; font-size: 20px;}
 
 /* Home */
 section {}
-section .mainTitle {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center;}
+section .mainTitle {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;}
 section .mainTitle h5 {font-size: 24px; font-weight: 700; color: #101743; margin: 0 0 30px;}
 section .mainTitle p {font-size: 50px; font-weight: 300; line-height: 50px; color: #101743;}
-section .mainTitle input[type="text"] {width: 750px; height: 60px; background: #D1D0D5; background: #F9F9FA; border: 1px solid transparent; font-size: 15px; border-radius: 30px; margin: 30px 0 20px; padding: 0 34px; box-sizing: border-box; font-size: 17px;}
+section .mainTitle input[type="text"] {width: 100%; height: 60px; background: #D1D0D5; background: #F9F9FA; border: 1px solid transparent; font-size: 15px; border-radius: 30px; margin: 30px 0 20px; padding: 0 34px; box-sizing: border-box; font-size: 17px;}
 input[type="text"]::placeholder {color:#BBBAC1;}
-section .mainTitle button {width: 140px; height: 60px; border-radius: 30px; position: absolute; right: 0; margin: 30px 0; transition: all .5s;}
+section .mainTitle button {width: 140px; height: 60px; border-radius: 30px; position: absolute; right: 0; margin: 30px 0; transition-property:box-shadow; transition-duration: 0.5s;}
 section .mainTitle button:hover {box-shadow: inset 1px 1px 10px rgb(193 193 193); transition: all .5s;}
 section .mainTitle button img {width: 30px;}
 section .mainTitle .bottomLink {font-size: 16px; letter-spacing: 2px; color: #101743;}
 section .mainTitle .bottomLink em {}
 section .mainTitle .bottomLink a {margin: 0 0 0 10px; position: relative; transition: all .5s;}
 .list .layoutfix .subTitle {}
+section .inputBox {width: 800px; position: relative; margin: 0 auto;}
 
 /* List */
 .list {padding: 180px 0;}
@@ -133,7 +134,7 @@ section .mainTitle .bottomLink a {margin: 0 0 0 10px; position: relative; transi
 .list .layoutfix .leftTitle h4 {font-size: 45px; font-weight: 700; line-height: 39px; color: #101743; margin: 0 0 50px;}
 .list .layoutfix .leftTitle p {color: #101743; font-size: 20px; line-height: 34px; font-weight: 300; margin: 0 0 90px;}
 .list .layoutfix .leftTitle p em {color: #495FE9; font-weight: 700;}
-.list .layoutfix .inputBox {width: 665px; height: 60px; background: #D1D0D5; background: #F9F9FA; border: 1px solid #D1D0D5; font-size: 15px; border-radius: 5px; padding: 0 34px; box-sizing: border-box; font-size: 17px; text-align: center; text-align: center; margin: 0 auto;}
+.list .layoutfix .inputBox {width: 665px; height: 60px; background: #D1D0D5; background: #F9F9FA; border: 1px solid #D1D0D5; font-size: 15px; border-radius: 5px; padding: 0 34px; box-sizing: border-box; font-size: 17px; text-align: center; text-align: center; margin: 0 auto; word-break: break-all;}
 .list .layoutfix .inputBox p {line-height: 60px;}
 .list .layoutfix .inputBox button { width: 115px; height: 60px; border-radius: 5px; background: #979797; color: #fff; margin: 0 0 0 10px; transition: all .5s;}
 .list .layoutfix .inputBox button:hover {box-shadow: inset 3px 3px 10px rgb(116, 116, 116); transition: all .5s;}
@@ -198,3 +199,60 @@ h6.sub-sub-Title em {color: red;}
 .extraInfo.active {display: block;}
 .describe {display: none;}
 .describe.active {display: block;}
+
+/* Media Quiery */
+@media all and (max-width:1320px) {
+	
+}
+@media all and (max-width:1300px) {
+  header .layoutfix {padding: 0 25px;}
+  .layoutfix {width: auto; padding: 0 48px;}
+}
+@media all and (max-width:1000px) {
+  .notify .layoutfix ul li:first-child {margin: 0 0 30px;}
+	.notify .layoutfix ul li:last-child {display: initial; margin: 0;}
+}
+@media all and (max-width:800px) {
+	section .mainTitle input[type="text"] {height: 50px;}
+  section .inputBox {width: 80%;}
+  section .mainTitle p {font-size: 45px; line-height: 35px;}
+  section .mainTitle h5 {margin: 0 0 25px; font-size: 20px;}
+  section .mainTitle button {height: 50px; width: 100px;}
+  .leftTitle h4 {font-size: 34px !important; margin: 0 0 30px !important;}
+  .leftTitle p {margin: 0 0 70px!important; font-size: 18px!important; line-height: 30px!important;}
+  .notify .layoutfix input[type="text"] {width: 80%;}
+  .notify .layoutfix .btnBox a em {line-height: 45px;}
+  .notify .layoutfix .btnBox a {width: 160px; height: 45px;}
+  .notify .layoutfix .submitBtn {width: 100%; height: 55px;}
+  .content {margin: 0;}
+  .list .layoutfix .inputBox {width: 100%;}
+  .list .layoutfix .inputBox {padding: 0; font-size: 14px;}
+  .list .layoutfix .btnBox span em {line-height: 45px;}
+  .list .layoutfix .btnBox span {width: 160px; height: 45px;}
+}
+@media all and (max-width:600px) {
+section .mainTitle p {font-size: 35px;line-height: 15px;}
+section .mainTitle h5 {font-size: 16px;}
+section .mainTitle input[type="text"] {margin: 30px 0 10px; height: 40px;}
+section .mainTitle button {width: 100%; margin: 0 0 20px; position: initial; height: 40px;}
+section .mainTitle .bottomLink {font-size: 14px;letter-spacing: 0px;}
+section input[type="text"]::placeholder {font-size: 14px; text-align: center;}
+.tg th {padding: 20px 5px;font-size: 16px;}
+.tg td {font-size: 14px;}
+}
+
+@media all and (max-width:500px) {
+	.leftTitle h4 {font-size: 27px !important; margin: 0 0 20px !important;}
+  .list .layoutfix .leftTitle h4 {font-size: 23px !important;}
+  .leftTitle p {margin: 0 0 50px!important; font-size: 16px!important;}
+  .subTitle {margin: 0 0 40px;}
+  .subTitle b {font-size: 20px;}
+  .subTitle::after {bottom: -20px;}
+  .notify .layoutfix .btnBox a {width: calc((100% - 24px)/2);}
+  .subBox {margin: 0 0 40px;}
+  .list .layoutfix .inputBox p {line-height: 20px;}
+  .list .layoutfix .inputBox {padding: 5px; height: auto;}
+  .list .layoutfix .btnBox span {width: 130px;}
+  .list .layoutfix .btnBox span.danger {margin: 0 0 0 15px;}
+  .list .layoutfix .leftTitle p {font-size: 14px !important; line-height: 22px !important;}
+}
